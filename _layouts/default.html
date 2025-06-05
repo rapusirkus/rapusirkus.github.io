@@ -115,6 +115,14 @@
             width: 100%;
         }
 
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            margin-top: 60px;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -155,6 +163,8 @@
     <div class="container">
         {{ content }}
     </div>
+
+    <footer>© {{ 'now' | date:'%Y' }} Jaakko & Veera</footer>
 
     <script>
         // Smooth scrolling for anchor links
