@@ -50,23 +50,36 @@
 
         .nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 10px 20px;
+            padding: 0;
             background-color: black;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            margin: 0 auto;
+        }
+
+        .nav-inner {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
 
         .nav-logo {
             width: 40px;
+            margin-left: 0;
         }
 
         .menu-toggle {
             cursor: pointer;
             color: white;
+            margin-right: 0;
         }
 
         .dropdown-menu {
@@ -78,8 +91,8 @@
             background-color: black;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             z-index: 1000;
-            right: 20px;
-            top: 50px;
+            right: 0;
+            top: 100%;
         }
 
         .dropdown-menu li {
@@ -126,6 +139,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
         }
 
         .photo-gallery figure {
@@ -201,6 +215,7 @@
             color: white;
             text-align: center;
             background: none;
+            padding-top: 100px;
         }
 
         .hero h1 {
@@ -232,20 +247,26 @@
             font-size: 1.2rem;
         }
 
-        .card .photo-gallery {
-            display: none;
-        }
-
-        .section .photo-gallery {
-            display: flex;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <img src="assets/images/hero-icon.png" alt="Hero Icon" class="nav-logo">
+            </a>
+            <div class="menu-toggle">
+                <span class="menu-text">Lisätietoa</span>
+                <span class="hamburger-icon">☰</span>
+            </div>
+            <ul class="dropdown-menu">
+                <li><a href="#haapari">Hääpari</a></li>
+                <li><a href="#juhlapaikka">Juhlapaikka</a></li>
+                <li><a href="#pukukoodi">Pukukoodi</a></li>
+                <li><a href="#lahjat">Lahjat</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="hero">
         <img src="assets/images/hero-logo.png" alt="Hero Logo" style="width: 150px; margin-bottom: 20px;">
         <h1>15.8.2026</h1>
@@ -253,22 +274,6 @@
         <h3>Helsingin Vuosaareen!</h3>
         <p style="color: white;">Lähipiirissämme on paljon meille rakkaita lapsia, ja he ovat sydämellisesti tervetulleita juhlaamme. Pyydämme kuitenkin, että iltaosuuteen kahdeksasta eteenpäin jäävät vain aikuiset. Lisätietoa sekä ohjeet ilmoittautumiseen lisätään tälle sivulle lähempänä tilaisuutta.</p>
     </div>
-
-    <nav class="nav">
-        <a href="#" class="logo">
-            <img src="assets/images/hero-icon.png" alt="Hero Icon" class="nav-logo">
-        </a>
-        <div class="menu-toggle">
-            <span class="menu-text">Lisätietoa</span>
-            <span class="hamburger-icon">☰</span>
-        </div>
-        <ul class="dropdown-menu">
-            <li><a href="#haapari">Hääpari</a></li>
-            <li><a href="#juhlapaikka">Juhlapaikka</a></li>
-            <li><a href="#pukukoodi">Pukukoodi</a></li>
-            <li><a href="#lahjat">Lahjat</a></li>
-        </ul>
-    </nav>
 
     <div class="section" id="haapari">
         <h1 style="color: white;">Hääpari</h1>
@@ -373,4 +378,4 @@
         window.scrollTo(0, 0);
     </script>
 </body>
-</html> 
+</html>
