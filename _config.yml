@@ -4,6 +4,8 @@ description: "Tervetuloa häihimme 15.8.2026"
 baseurl: ""
 url: "https://rapusirkus.github.io"
 lang: fi
+encoding: utf-8
+permalink: pretty
 
 # Build settings
 markdown: kramdown
