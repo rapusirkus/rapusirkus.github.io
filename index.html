@@ -17,7 +17,8 @@
         
         body {
             margin: 0;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
             color: var(--text-color);
             background: linear-gradient(-45deg, #586dad, #0d0e45);
             line-height: 1.6;
@@ -29,27 +30,29 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
+            margin: 0.5em 0;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
             margin: 0.5em 0;
             line-height: 1.2;
         }
 
-        h2 {
-            font-size: 2.5rem;
+        h3 {
+            font-size: 1.5rem;
             margin: 0.5em 0;
             line-height: 1.3;
-        }
-
-        h3 {
-            font-size: 2rem;
-            margin: 0.5em 0;
-            line-height: 1.4;
         }
 
         .nav {
             position: fixed;
             top: 0;
             width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
             background-color: rgba(255, 255, 255, 0.95);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -176,7 +179,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 70vh;
             color: white;
             text-align: center;
             background: none;
@@ -245,6 +248,10 @@
         }
 
         .menu-toggle.active + .dropdown-menu {
+            display: none;
+        }
+
+        .menu-toggle.active.clicked + .dropdown-menu {
             display: block;
         }
     </style>
@@ -269,8 +276,8 @@
     </nav>
 
     <div class="section" id="haapari">
+        <h1 style="color: white;">Hääpari</h1>
         <div class="card">
-            <h1>Hääpari</h1>
             <h2>Re-cap hääparista, aveceille joita ei ole tavattu tai huonomuisisille läheisille</h2>
             <p>Kaksi toivonsa menettänyttä löysi toisensa Tinderistä koronasulkujen aikakaudella ja treffasi seurasaaressa geokätköjen merkeissä.</p>
             <p>Joidenkin kauhistelemalla nopeudella Jaakon kodista tuli yhteinen, perheeseen liittyi uusi rescue-kissa Espanjasta ja pian olikin ostettu pala Vantaata.</p>
@@ -310,8 +317,8 @@
     </div>
 
     <div class="section" id="juhlapaikka">
+        <h1 style="color: white;">Juhlapaikka</h1>
         <div class="card">
-            <h1>Juhlapaikka</h1>
             <p>Meillä ei ole erillistä kirkkovihkimistä, vaan koko juhla vietetään Villa Ivan Falinissa.</p>
             <h2>Sijainti</h2>
             <p>Villa Ivan Falin sijaitsee Helsingin Vuosaaressa, meren äärellä. Juhlapaikalle on hyvät kulkuyhteydet sekä julkisilla että omalla autolla.</p>
@@ -336,8 +343,8 @@
     </div>
 
     <div class="section" id="pukukoodi">
+        <h1 style="color: white;">Pukukoodi</h1>
         <div class="card">
-            <h1>Pukukoodi</h1>
             <h2>Tumma / vaalea puku</h2>
             <p><strong>Miehet:</strong> Puku kauluspaidalla ja halutessasi solmiolla, värit vapaasti valittavissa. Voit halutessasi yhdistää puvuntakkiin myös toiset housut, mutta toivoisimme ettei tilaisuuteemme tultaisi farkuissa.</p>
             <p><strong>Naiset:</strong> Mekko / housupuku. Vältäthän kokonaan valkoisia sekä minihamemittaisia asuja. Tärkeintä on, että kokonaisuus on juhlava ja arvokas.</p>
@@ -345,8 +352,8 @@
     </div>
 
     <div class="section" id="lahjat">
+        <h1 style="color: white;">Lahjat</h1>
         <div class="card">
-            <h1>Lahjat</h1>
             <p>Koska olemme jo ehtineet kerryttää kaikki tarpeelliset pyyhkeet, kodinkoneet ja astiat, toivoisimme ettette toisi meille fyysisiä lahjoja juhlapäivänämme.</p>
             <p>Jos haluatte muistaa meitä, kerrytämme häämatkakassaa tilille FI96 8954 0710 0847 31.</p>
             <p>Jos on ihan ihan pakko tuoda joitain konkreettista hääjuhlaan tai raha tuntuu pahalta antaa niin astiastomme on Pentikin Saagaa ja lennämme Finnairilla.</p>
@@ -363,7 +370,7 @@
             const dropdownMenu = document.querySelector('.dropdown-menu');
 
             menuToggle.addEventListener('click', function() {
-                menuToggle.classList.toggle('active');
+                menuToggle.classList.toggle('clicked');
                 dropdownMenu.classList.toggle('active');
             });
         });
