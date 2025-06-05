@@ -29,62 +29,64 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 5rem;
             margin: 1em 0;
+            line-height: 1.2;
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 1em 0;
+            line-height: 1.3;
         }
 
         h3 {
             font-size: 2.5rem;
             margin: 1em 0;
+            line-height: 1.4;
         }
 
         .hero {
+            position: relative;
+            text-align: center;
+            padding: 6rem 1rem;
             background: linear-gradient(45deg, #0d0e45, #586dad);
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            min-height: 400px;
+            color: white;
+            overflow: hidden;
+            min-height: 40vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-            position: relative;
-            overflow: hidden;
         }
 
-        .hero-background-logo {
+        .hero .background-logo {
             position: absolute;
-            width: 150%;
-            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
             opacity: 0.1;
-            top: -25%;
-            left: -25%;
-            pointer-events: none;
+            z-index: 0;
         }
 
-        .hero-logo {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 1rem;
+        .hero-content {
             position: relative;
             z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.2;
         }
 
         .hero h1 {
             font-family: 'ivy-presto-standard', serif;
-            font-size: 5.5rem;
+            font-size: 6.5rem;
             margin: 0;
             letter-spacing: 2px;
             position: relative;
             z-index: 1;
+            line-height: 1.1;
         }
 
         .hero .welcome-text {
@@ -107,19 +109,20 @@
 
         .hero .date {
             font-family: 'ivy-presto-standard', serif;
-            font-size: 4.5rem;
-            margin: 0;
-            margin-bottom: 0.5rem;
+            font-size: 5rem;
+            margin: 0.3em 0;
             position: relative;
             z-index: 1;
+            line-height: 1.1;
         }
 
         .hero .location {
             font-family: 'ivy-presto-standard', serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin: 0;
             position: relative;
             z-index: 1;
+            line-height: 1.2;
         }
 
         .hero p {
@@ -256,6 +259,28 @@
             background-color: var(--accent-color);
             color: var(--text-color);
             margin-top: 60px;
+        }
+
+        main {
+            padding: 0;
+            margin: 0;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 1em 0;
+        }
+
+        main ul {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        main li {
+            margin: 0.5em 0;
         }
 
         @media (max-width: 768px) {

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="hero">
+    <img src="/assets/images/logo.png" class="background-logo" alt="Background Logo">
+    <div class="hero-content">
+        <h1>{{ page.hero_title }}</h1>
+        {% if page.hero_subtitle %}
+        <div class="location">{{ page.hero_subtitle }}</div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container">
+    {{ content }}
+</div> 
