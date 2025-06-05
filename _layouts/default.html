@@ -29,16 +29,18 @@
         }
 
         h1 {
-            font-size: 3.5rem;
-            margin: 0.5em 0;
+            font-size: 4rem;
+            margin: 1em 0;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin: 1em 0;
         }
 
         h3 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            margin: 1em 0;
         }
 
         .hero {
@@ -78,7 +80,7 @@
 
         .hero h1 {
             font-family: 'ivy-presto-standard', serif;
-            font-size: 4.5rem;
+            font-size: 5.5rem;
             margin: 0;
             letter-spacing: 2px;
             position: relative;
@@ -105,7 +107,7 @@
 
         .hero .date {
             font-family: 'ivy-presto-standard', serif;
-            font-size: 3rem;
+            font-size: 4.5rem;
             margin: 0;
             margin-bottom: 0.5rem;
             position: relative;
@@ -130,7 +132,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -202,10 +204,15 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
             padding: 0.5rem 0;
             border-radius: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .dropdown.active .dropdown-content {
             display: block;
+            opacity: 1;
+            visibility: visible;
         }
 
         .dropdown-content li {

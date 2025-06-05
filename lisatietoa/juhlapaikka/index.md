@@ -1,7 +1,6 @@
 ---
 layout: default
 hero_title: "Juhlapaikka"
-hero_subtitle: "Villa Ivan Falin"
 ---
 
 Meillä ei ole erillistä kirkkovihkimistä, vaan koko juhla vietetään Villa Ivan Falinissa.
