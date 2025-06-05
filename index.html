@@ -20,7 +20,7 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             color: var(--text-color);
-            background: linear-gradient(-45deg, #586dad, #0d0e45);
+            background: linear-gradient(90deg, #0d0e45, #586dad);
             line-height: 1.6;
         }
 
@@ -52,8 +52,6 @@
             position: fixed;
             top: 0;
             width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
             background-color: black;
             z-index: 1000;
             transition: all 0.3s ease;
@@ -110,9 +108,8 @@
         }
 
         .photo-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 2rem 0;
             margin-top: 40px;
@@ -163,24 +160,23 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 4rem;
             }
 
             h2 {
-                font-size: 2rem;
+                font-size: 1rem;
             }
 
             h3 {
-                font-size: 1.5rem;
-            }
-
-            .card {
-                padding: 20px;
+                font-size: 0.8rem;
             }
 
             .photo-gallery {
-                flex-direction: column;
-                align-items: center;
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 10px;
             }
         }
 
@@ -233,6 +229,29 @@
 
         .dropdown-menu {
             display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            background-color: black;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--accent-color);
         }
 
         .menu-toggle.clicked + .dropdown-menu {
@@ -254,16 +273,25 @@
 </head>
 <body>
     <div class="hero">
-        <img src="hero-logo.svg" alt="Hero Logo" style="width: 150px; margin-bottom: 20px;">
+        <img src="hero-logo.png" alt="Hero Logo" style="width: 150px; margin-bottom: 20px;">
         <h1>Lämpimästi tervetuloa häihimme</h1>
         <p>Join us in celebrating our special day</p>
     </div>
 
     <nav class="nav">
-        <div class="menu-toggle">
+        <a href="#" class="logo" style="position: absolute; left: 20px; top: 10px;">
+            <img src="hero-icon.png" alt="Hero Icon" style="width: 40px;">
+        </a>
+        <div class="menu-toggle" style="position: absolute; right: 20px; top: 10px;">
             <span class="hamburger-icon">☰</span>
             <span class="menu-text">Lisätietoa</span>
         </div>
+        <ul class="dropdown-menu">
+            <li><a href="#haapari">Hääpari</a></li>
+            <li><a href="#juhlapaikka">Juhlapaikka</a></li>
+            <li><a href="#pukukoodi">Pukukoodi</a></li>
+            <li><a href="#lahjat">Lahjat</a></li>
+        </ul>
     </nav>
 
     <div class="section" id="haapari">
