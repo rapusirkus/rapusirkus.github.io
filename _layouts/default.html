@@ -360,15 +360,15 @@
 
     <nav class="nav">
         <ul>
-            <li><a href="{{ '/' | relative_url }}">Etusivu</a></li>
-            <li><a href="{{ '/hääpari/' | relative_url }}">Hääpari</a></li>
+            <li><a href="/">Etusivu</a></li>
+            <li><a href="/haapari">Hääpari</a></li>
             <li class="dropdown">
-                <a href="{{ '/lisatietoa/' | relative_url }}">Lisätietoa</a>
-                <ul class="dropdown-content">
-                    <li><a href="{{ '/lisatietoa/juhlapaikka/' | relative_url }}">Juhlapaikka</a></li>
-                    <li><a href="{{ '/lisatietoa/pukukoodi/' | relative_url }}">Pukukoodi</a></li>
-                    <li><a href="{{ '/lisatietoa/lahjat/' | relative_url }}">Lahjat</a></li>
-                </ul>
+                <a href="/lisatietoa">Lisätietoa</a>
+                <div class="dropdown-content">
+                    <a href="/lisatietoa/juhlapaikka">Juhlapaikka</a>
+                    <a href="/lisatietoa/pukukoodi">Pukukoodi</a>
+                    <a href="/lisatietoa/lahjat">Lahjat</a>
+                </div>
             </li>
         </ul>
     </nav>
