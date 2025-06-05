@@ -1,2 +1,21 @@
+theme: minima
 title: Jaakko & Veera
-permalink: pretty
+description: "Tervetuloa häihimme 15.8.2026"
+baseurl: ""
+url: "https://rapusirkus.github.io"
+lang: fi
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom variables
+wedding_date: "2026-08-15"
+venue_name: "Villa Ivan Falini"
+venue_address: "Vuosaari, Helsinki"
+
+# Social links (if you want to add them)
+# facebook_username: 
+# instagram_username: 

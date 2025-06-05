@@ -1,30 +1,183 @@
-<!doctype html><html lang="fi"><head>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" href="https://use.typekit.net/uyg2hmo.css">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <link href="{{ '/assets/css/site.css' | relative_url }}" rel="stylesheet"/>
-</head><body>
-<header>
-  <section class="hero">
-  <div class="hero__inner">
-    <h1>{{ page.hero_title | default: page.title }}</h1>
-    {% if page.hero_subtitle %}
-      <p class="hero__sub">{{ page.hero_subtitle }}</p>
-    {% endif %}
-  </div>
-</section>
-  <nav>
-    <a href="{{ '/' | relative_url }}">Etusivu</a>
-    <a href="{{ '/haapari/' | relative_url }}">Hääpari</a>
-    <details>
-      <summary>Lisätietoa</summary>
-      <a href="{{ '/lisatietoa/juhlapaikka/' | relative_url }}">Juhlapaikka</a>
-      <a href="{{ '/lisatietoa/pukukoodi/' | relative_url }}">Pukukoodi</a>
-      <a href="{{ '/lisatietoa/lahjat/' | relative_url }}">Lahjat</a>
-    </details>
-  </nav>
-</header>
-<main>{{ content }}</main>
-<footer>© {{ 'now' | date:'%Y' }} Jaakko & Veera</footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "fi" }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap">
+    <style>
+        :root {
+            --primary-color: #94a3b8;
+            --secondary-color: #475569;
+            --accent-color: #cbd5e1;
+            --text-color: #1e293b;
+            --background-color: #f8fafc;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px 0;
+            white-space: pre-line;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav li {
+            margin: 0 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 20px 0;
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 15px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    {% seo %}
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#aikataulu">Aikataulu</a></li>
+            <li><a href="#sijainti">Sijainti</a></li>
+            <li><a href="#ilmoittautuminen">Ilmoittautuminen</a></li>
+            <li><a href="#majoitus">Majoitus</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>{{ page.hero_title }}</h1>
+        <p>{{ page.hero_subtitle }}</p>
+    </div>
+
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar transparency on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
