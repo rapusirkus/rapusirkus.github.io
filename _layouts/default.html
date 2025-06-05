@@ -1,0 +1,30 @@
+<!doctype html><html lang="fi"><head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://use.typekit.net/uyg2hmo.css">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link href="{{ '/assets/css/site.css' | relative_url }}" rel="stylesheet"/>
+</head><body>
+<header>
+  <section class="hero">
+  <div class="hero__inner">
+    <h1>{{ page.hero_title | default: page.title }}</h1>
+    {% if page.hero_subtitle %}
+      <p class="hero__sub">{{ page.hero_subtitle }}</p>
+    {% endif %}
+  </div>
+</section>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Etusivu</a>
+    <a href="{{ '/haapari/' | relative_url }}">Hääpari</a>
+    <details>
+      <summary>Lisätietoa</summary>
+      <a href="{{ '/lisatietoa/juhlapaikka/' | relative_url }}">Juhlapaikka</a>
+      <a href="{{ '/lisatietoa/pukukoodi/' | relative_url }}">Pukukoodi</a>
+      <a href="{{ '/lisatietoa/lahjat/' | relative_url }}">Lahjat</a>
+    </details>
+  </nav>
+</header>
+<main>{{ content }}</main>
+<footer>© {{ 'now' | date:'%Y' }} Jaakko & Veera</footer>
+</body></html>
