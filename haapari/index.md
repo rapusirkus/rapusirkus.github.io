@@ -1,16 +1,8 @@
 ---
-layout: default
+layout: page
 title: Hääpari
 hero_title: "Hääpari"
 ---
-
-Ensimmäinen yhteiskuva
-
-Ensimmäinen ulkomaanmatka
-
-Ensimmäinen yhteinen joulukortti
-
-Ensimmäinen yhteinen kissa
 
 ### Re-cap hääparista, aveceille joita ei ole tavattu tai huonomuisisille läheisille
 
@@ -21,12 +13,6 @@ Joidenkin kauhistelemalla nopeudella Jaakon kodista tuli yhteinen, perheeseen li
 Pieneksi ikuisuusprojekiksi osoittautunut talonrakennus on aiheuttanut molemmille harmaita hiuksia, mutta siitä huolimatta jaksamista riittänyt on monituisiin reissuihin. Syksyllä 2024 pariskunta oli Singaporessa jossa Jaakko ensitreffien teemasta inspiroituneena käytti geokätköä kosintaan. 
 
 Viimein puolitoista vuotta ennen häitä päästiin rakennusprojektikin viimein aloittamaan. Aika näyttää onko valmista vielä häihin mennessä.
-
-Ekat yhteiset festarit
-
-Ekat drinkit kihlauksen jälkeen
-
-Ensimmäinen yhteinen talo
 
 <div class="photo-gallery">
     <figure>
