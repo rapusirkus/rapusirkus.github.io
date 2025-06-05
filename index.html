@@ -49,48 +49,56 @@
         }
 
         .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: black;
             z-index: 1000;
-            transition: all 0.3s ease;
         }
 
-        .nav ul {
+        .nav-logo {
+            width: 40px;
+        }
+
+        .menu-toggle {
+            cursor: pointer;
+            color: white;
+        }
+
+        .dropdown-menu {
+            display: none;
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            justify-content: center;
+            position: absolute;
+            background-color: black;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            right: 20px;
+            top: 50px;
         }
 
-        .nav li {
-            margin: 0 20px;
-            position: relative;
+        .dropdown-menu li {
+            margin: 0;
         }
 
-        .nav a, .menu-toggle {
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
             text-decoration: none;
             color: white;
-            padding: 20px 0;
-            display: inline-block;
-            position: relative;
         }
 
-        .nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 15px;
-            left: 0;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease;
+        .dropdown-menu a:hover {
+            background-color: var(--accent-color);
         }
 
-        .nav a:hover::after {
-            width: 100%;
+        .menu-toggle.clicked + .dropdown-menu {
+            display: block;
         }
 
         .section {
@@ -160,15 +168,15 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             h2 {
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
 
             h3 {
-                font-size: 0.8rem;
+                font-size: 1.2rem;
             }
 
             .photo-gallery {
@@ -176,7 +184,7 @@
             }
 
             .card {
-                padding: 10px;
+                padding: 20px;
             }
         }
 
@@ -211,13 +219,6 @@
             }
         }
 
-        .menu-toggle {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            padding: 20px;
-        }
-
         .hamburger-icon {
             font-size: 1.5rem;
             margin-right: 10px;
@@ -225,37 +226,6 @@
 
         .menu-text {
             font-size: 1.2rem;
-        }
-
-        .dropdown-menu {
-            display: none;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            background-color: black;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            z-index: 1000;
-            width: 100%;
-        }
-
-        .dropdown-menu li {
-            margin: 0;
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: white;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: var(--accent-color);
-        }
-
-        .menu-toggle.clicked + .dropdown-menu {
-            display: block;
         }
 
         .card .photo-gallery {
@@ -279,10 +249,10 @@
     </div>
 
     <nav class="nav">
-        <a href="#" class="logo" style="position: absolute; left: 20px; top: 10px;">
-            <img src="hero-icon.png" alt="Hero Icon" style="width: 40px;">
+        <a href="#" class="logo">
+            <img src="hero-icon.png" alt="Hero Icon" class="nav-logo">
         </a>
-        <div class="menu-toggle" style="position: absolute; right: 20px; top: 10px;">
+        <div class="menu-toggle">
             <span class="hamburger-icon">☰</span>
             <span class="menu-text">Lisätietoa</span>
         </div>
