@@ -30,37 +30,37 @@ Ensimmäinen yhteinen talo
 
 <div class="photo-gallery">
     <figure>
-        <img src="/assets/images/first-photo.jpg" alt="Ensimmäinen yhteiskuva">
+        <img src="/assets/images/first-photo.png" alt="Ensimmäinen yhteiskuva">
         <figcaption>Ensimmäinen yhteiskuva</figcaption>
     </figure>
     
     <figure>
-        <img src="/assets/images/first-trip.jpg" alt="Ensimmäinen ulkomaanmatka">
+        <img src="/assets/images/first-trip.png" alt="Ensimmäinen ulkomaanmatka">
         <figcaption>Ensimmäinen ulkomaanmatka</figcaption>
     </figure>
     
     <figure>
-        <img src="/assets/images/first-christmas.jpg" alt="Ensimmäinen yhteinen joulukortti">
+        <img src="/assets/images/first-christmas.png" alt="Ensimmäinen yhteinen joulukortti">
         <figcaption>Ensimmäinen yhteinen joulukortti</figcaption>
     </figure>
     
     <figure>
-        <img src="/assets/images/first-cat.jpg" alt="Ensimmäinen yhteinen kissa">
+        <img src="/assets/images/first-cat.png" alt="Ensimmäinen yhteinen kissa">
         <figcaption>Ensimmäinen yhteinen kissa</figcaption>
     </figure>
     
     <figure>
-        <img src="/assets/images/first-festival.jpg" alt="Ekat yhteiset festarit">
+        <img src="/assets/images/first-festival.png" alt="Ekat yhteiset festarit">
         <figcaption>Ekat yhteiset festarit</figcaption>
     </figure>
     
     <figure>
-        <img src="/assets/images/engagement-drinks.jpg" alt="Ekat drinkit kihlauksen jälkeen">
+        <img src="/assets/images/engagement-drinks.png" alt="Ekat drinkit kihlauksen jälkeen">
         <figcaption>Ekat drinkit kihlauksen jälkeen</figcaption>
     </figure>
     
     <figure>
-        <img src="/assets/images/first-house.jpg" alt="Ensimmäinen yhteinen talo">
+        <img src="/assets/images/first-house.png" alt="Ensimmäinen yhteinen talo">
         <figcaption>Ensimmäinen yhteinen talo</figcaption>
     </figure>
 </div>
