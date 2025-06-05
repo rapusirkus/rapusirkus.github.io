@@ -7,11 +7,25 @@
 </head><body>
 <header class="site-header">
   <nav class="site-nav">
-    <a href="{{ '/'        | relative_url }}">Etusivu</a>
-    <a href="{{ '/haapari/'| relative_url }}">Hääpari</a>
+    <a href="{{ '/' | relative_url }}">Etusivu</a>
+    <a href="{{ '/haapari/' | relative_url }}">Hääpari</a>
     <a href="{{ '/lisatietoa/' | relative_url }}">Lisätietoa</a>
   </nav>
 </header>
+
+<!-- ↓↓↓  add this  ↓↓↓ -->
+<section class="hero">
+  <div class="hero__inner">
+    <h1>{{ page.hero_title | default: page.title }}</h1>
+    {% if page.hero_subtitle %}
+      <p class="hero__sub">{{ page.hero_subtitle | markdownify }}</p>
+    {% endif %}
+  </div>
+</section>
+<!-- ↑↑↑  add this  ↑↑↑ -->
+
+<main>{{ content }}</main>
+
 <main>{{ content }}</main>
 <footer>© {{ 'now' | date:'%Y' }} Jaakko & Veera</footer>
 </body></html>
