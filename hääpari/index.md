@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hääpari
-hero_title: Hääpari
+hero_title: "Hääpari"
 ---
 
 Ensimmäinen yhteiskuva

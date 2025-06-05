@@ -1,10 +1,24 @@
 ---
 layout: default
-title: Juhlapaikka
-hero_title: Juhlapaikka
+hero_title: "Juhlapaikka"
+hero_subtitle: "Villa Ivan Falin"
 ---
 
 Meillä ei ole erillistä kirkkovihkimistä, vaan koko juhla vietetään Villa Ivan Falinissa.
+
+## Sijainti
+
+Villa Ivan Falin sijaitsee Helsingin Vuosaaressa, meren äärellä. Juhlapaikalle on hyvät kulkuyhteydet sekä julkisilla että omalla autolla.
+
+**Osoite:** [Villa Ivan Falinin tarkka osoite]
+
+## Majoitus
+
+Suosittelemme seuraavia majoitusvaihtoehtoja:
+
+- Hotelli Rantapuisto (1,5 km)
+- Scandic Vuosaari (2 km)
+- Hotel Sofia (4 km)
 
 ### Saapuminen
 
@@ -16,18 +30,14 @@ Julkisilla paikalle pääsee päärautatieasemalta noin tunnissa. Julkisilla saa
 
 ### Majoitusvinkit
 
-Hotelli Rantapuisto
-
+**Hotelli Rantapuisto**  
 10 minuutin ajomatka, n. 130e/2hh huone
 
-Hotelli Sofia
-
+**Hotelli Sofia**  
 15 minuutin ajomatka, n. 120e/2hh huone
 
-Noli Herttoniemi
-
+**Noli Herttoniemi**  
 15 minuutin ajomatka, n. 95e/2hh huone
 
-Airbnb
-
+**Airbnb**  
 Muutamia asuntoja Vuosaaressa lähellä hääpaikkaa, 70-150e 
