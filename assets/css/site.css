@@ -1,10 +1,39 @@
+/* ---------- Variables ---------- */
+:root {
+  --brand-dark: #0d0e45;
+  --brand-light: #586dad;
+  --text-body:  #1e1e1e;
+}
+
+/* ---------- Global reset ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+/* ---------- Ivy Standard headings ---------- */
+h1, h2, h3 {
+  font-family: 'ivy-std', serif;   /* Adobe kit name */
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin-top: 2.5rem; }
+h3 { font-size: clamp(1.4rem, 3.5vw, 2rem);  margin-top: 2rem; }
+
 /* ---------- Navigation ---------- */
 .site-header {
-  position: absolute;      /* floats above the hero */
+  position: absolute;             /* floats above hero */
   top: 0; left: 0; width: 100%;
   padding: 1rem 2rem;
   display: flex; justify-content: center; gap: 1rem;
-  background: transparent; /* no bar */
+  background: transparent;
   z-index: 30;
 }
 
@@ -20,66 +49,8 @@
   color: #fff;
   text-align: center;
   width: 100%;
-  margin: 0;               /* kill any default margins */
-  padding: 7rem 0 6rem;    /* vertical only → touches viewport edges */
-}
-
-.hero__inner {            /* keep content centred/narrow */
-  max-width: 60rem;
-  margin-inline: auto;
-}
-
-/* ---------- Variables ---------- */
-:root {
-  --brand-dark: #0d0e45;
-  --brand-light: #586dad;
-  --text-body:  #1e1e1e;
-}
-
-/* ---------- Global resets ---------- */
-*,
-*::before,
-*::after { box-sizing: border-box; margin: 0; }
-
-body {
-  font-family: system-ui, sans-serif;
-  color: var(--text-body);
-  line-height: 1.55;
-}
-
-/* ---------- Ivy Standard headings ---------- */
-h1, h2, h3 {
-  font-family: 'ivy-std', serif;   /* Adobe kit loads the font under this name */
-  font-weight: 400;                /* Ivy Standard is usually single-weight */
-  line-height: 1.2;
-}
-
-h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
-h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin-top: 2.5rem; }
-h3 { font-size: clamp(1.4rem, 3.5vw, 2rem);  margin-top: 2rem; }
-
-/* ---------- Layout blocks ---------- */
-header {
-  position: relative;              /* keeps the nav on top of the hero */
-  z-index: 10;
-  padding: 1rem;
-}
-
-nav a, nav summary {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 1rem;
-  font-weight: 600;
-}
-
-details[open] > summary { border-bottom: 1px solid rgba(255,255,255,.4); }
-
-.hero {
-  background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-light) 100%);
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  padding: 6rem 1rem;              /*   6 rem ≈ 96 px top/bottom */
+  margin: 0;                     /* edge-to-edge */
+  padding: 7rem 0 6rem;          /* vertical only */
 }
 
 .hero__inner {
@@ -93,7 +64,8 @@ details[open] > summary { border-bottom: 1px solid rgba(255,255,255,.4); }
   margin-top: 1rem;
 }
 
-main {                              /* the content that follows the hero */
+/* ---------- Content + footer ---------- */
+main {
   padding: 3rem 1rem 4rem;
   max-width: 55rem;
   margin-inline: auto;
