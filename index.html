@@ -25,8 +25,8 @@
         }
 
         h1, h2, h3 {
-            font-family: 'ivy-presto-regular', serif;
-            font-weight: 400;
+            font-family: 'ivy-presto-bold', serif;
+            font-weight: 700;
         }
 
         h1 {
@@ -109,11 +109,8 @@
         }
 
         .photo-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 2rem 0;
+            position: relative;
+            z-index: 1;
         }
 
         .photo-gallery figure {
@@ -237,6 +234,10 @@
 
         .section .photo-gallery {
             display: flex;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
 </head>
@@ -251,12 +252,6 @@
             <span class="hamburger-icon">☰</span>
             <span class="menu-text">Lisätietoa</span>
         </div>
-        <ul class="dropdown-menu">
-            <li><a href="#haapari">Hääpari</a></li>
-            <li><a href="#juhlapaikka">Juhlapaikka</a></li>
-            <li><a href="#pukukoodi">Pukukoodi</a></li>
-            <li><a href="#lahjat">Lahjat</a></li>
-        </ul>
     </nav>
 
     <div class="section" id="haapari">
