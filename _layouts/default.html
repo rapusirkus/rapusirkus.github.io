@@ -374,19 +374,26 @@
     </nav>
 
     <div class="hero">
-        <img src="/assets/images/logo-neg.svg" alt="" class="hero-background-logo" aria-hidden="true">
-        <img src="/assets/images/logo-neg.svg" alt="Logo" class="hero-logo">
-        {% if page.url == "/" %}
-            <p class="welcome-text">Lämpimästi tervetuloa</p>
-            <p class="main-text">Jaakon ja Veeran häihin</p>
-            <p class="date">15.8.2026</p>
-            <p class="location">Villa Ivan Falin, Helsingin Vuosaari</p>
-        {% else %}
-            <h1>{{ page.hero_title }}</h1>
-            {% if page.hero_subtitle %}
-            <p>{{ page.hero_subtitle }}</p>
+        <div class="hero-content">
+            {% if page.welcome_text %}
+            <div class="welcome-text">{{ page.welcome_text }}</div>
             {% endif %}
-        {% endif %}
+            {% if page.main_text %}
+            <div class="main-text">{{ page.main_text }}</div>
+            {% endif %}
+            {% if page.date %}
+            <div class="date">{{ page.date }}</div>
+            {% endif %}
+            {% if page.location %}
+            <div class="location">{{ page.location }}</div>
+            {% endif %}
+            {% if page.hero_title %}
+            <h1>{{ page.hero_title }}</h1>
+            {% endif %}
+            {% if page.hero_subtitle %}
+            <div class="location">{{ page.hero_subtitle }}</div>
+            {% endif %}
+        </div>
     </div>
 
     <div class="container">
