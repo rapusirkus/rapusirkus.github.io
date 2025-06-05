@@ -179,7 +179,7 @@
             height: 100vh;
             color: white;
             text-align: center;
-            background: linear-gradient(-45deg, #586dad, #0d0e45);
+            background: none;
         }
 
         .hero h1 {
@@ -201,6 +201,52 @@
                 font-size: 1.2rem;
             }
         }
+
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 20px;
+        }
+
+        .hamburger-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .menu-text {
+            font-size: 1.2rem;
+        }
+
+        .dropdown-menu {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .menu-toggle.active + .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -210,7 +256,11 @@
     </div>
 
     <nav class="nav">
-        <ul>
+        <div class="menu-toggle">
+            <span class="hamburger-icon">☰</span>
+            <span class="menu-text">Lisätietoa</span>
+        </div>
+        <ul class="dropdown-menu">
             <li><a href="#haapari">Hääpari</a></li>
             <li><a href="#juhlapaikka">Juhlapaikka</a></li>
             <li><a href="#pukukoodi">Pukukoodi</a></li>
@@ -306,5 +356,17 @@
     <footer>
         &copy; 2026 Jaakko & Veera
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                dropdownMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html> 
