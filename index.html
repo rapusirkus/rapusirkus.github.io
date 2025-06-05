@@ -37,13 +37,13 @@
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin: 0.3em 0;
             line-height: 1.1;
         }
 
         h3 {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin: 0.3em 0;
             line-height: 1.1;
         }
@@ -54,7 +54,7 @@
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: black;
             z-index: 1000;
             transition: all 0.3s ease;
         }
@@ -72,9 +72,9 @@
             position: relative;
         }
 
-        .nav a {
+        .nav a, .menu-toggle {
             text-decoration: none;
-            color: var(--text-color);
+            color: white;
             padding: 20px 0;
             display: inline-block;
             position: relative;
@@ -115,6 +115,8 @@
             justify-content: center;
             gap: 2rem;
             padding: 2rem 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         .photo-gallery figure {
@@ -150,8 +152,8 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: var(--accent-color);
-            color: var(--text-color);
+            background-color: black;
+            color: white;
             margin-top: 60px;
         }
 
@@ -252,7 +254,8 @@
 </head>
 <body>
     <div class="hero">
-        <h1>Welcome to Our Wedding</h1>
+        <img src="hero-logo.svg" alt="Hero Logo" style="width: 150px; margin-bottom: 20px;">
+        <h1>Lämpimästi tervetuloa häihimme</h1>
         <p>Join us in celebrating our special day</p>
     </div>
 
