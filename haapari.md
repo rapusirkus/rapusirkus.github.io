@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hääpari
+hero_title: Hääpari
 ---
-# Jaakko & Veera
 
-Lyhyt tarinamme – korvaa omallasi!
+[Content will be added here]

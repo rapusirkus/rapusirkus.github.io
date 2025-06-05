@@ -8,6 +8,10 @@ hero_subtitle: |                   # multiline → keeps your three-line intro
   15.8.2026 – Villa Ivan Falini, Helsingin Vuosaari
 ---
 
+Lähipiirissämme on paljon meille rakkaita lapsia, ja he ovat sydämellisesti tervetulleita juhlaamme. Pyydämme kuitenkin, että iltaosuuteen **kahdeksasta eteenpäin** jäävät vain aikuiset.
+
+Lisätietoa sekä ohjeet ilmoittautumiseen lisätään tälle sivulle lähempänä tilaisuutta. Jos sinulla on kysyttävää, ota yhteyttä: [email@example.com](mailto:email@example.com)
+
 <section id="info" markdown="1">
 ## Tervetuloa juhlimaan kanssamme
 
