@@ -141,7 +141,7 @@
 
             .hero img {
                 width: 250px;
-                margin-top: 60px;
+                margin-top: 100px;
             }
         }
 
@@ -154,9 +154,53 @@
                 width: 400px;
             }
         }
+
+        .nav-logo {
+            width: 50px; /* Slightly larger logo */
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            color: white;
+            text-align: center;
+            background: none;
+            padding-top: 100px;
+            margin-bottom: 100px; /* Add bottom margin to prevent overlap */
+        }
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <img src="assets/images/hero-icon.png" alt="Hero Icon" class="nav-logo">
+            </a>
+            <div class="menu-toggle">
+                <span class="menu-text">Lisätietoa</span>
+                <span class="hamburger-icon">☰</span>
+            </div>
+            <ul class="dropdown-menu">
+                <li><a href="haapari.html">Hääpari</a></li>
+                <li><a href="#juhlapaikka">Juhlapaikka</a></li>
+                <li><a href="#pukukoodi">Pukukoodi</a></li>
+                <li><a href="#lahjat">Lahjat</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="section" id="haapari">
         <h1 style="color: white;">Hääpari</h1>
         <div class="card">
@@ -204,6 +248,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('clicked');
+                dropdownMenu.classList.toggle('active');
+            });
+
             // Remove hash from URL on page load
             if (window.location.hash) {
                 window.history.replaceState(null, null, window.location.pathname);
