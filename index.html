@@ -126,7 +126,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -198,11 +198,13 @@
             background: none;
             padding-top: 140px;
             margin-bottom: 100px;
+            padding-bottom: 3rem;
         }
 
         .hero img {
             width: 300px;
-            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto 20px;
         }
 
         .hero h1 {
@@ -212,7 +214,9 @@
 
         .hero p {
             font-size: 1.5rem;
-            margin: 0.5em 0;
+            margin: 0.5em auto;
+            max-width: 800px;
+            padding: 0 1rem;
         }
 
         .hamburger-icon {
@@ -222,6 +226,12 @@
 
         .menu-text {
             font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
         }
 
     </style>
