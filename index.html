@@ -186,7 +186,7 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 3rem;
+                font-size: 4rem;
             }
 
             h2 {
@@ -203,6 +203,33 @@
 
             .card {
                 padding: 20px;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+            .hero img {
+                width: 250px;
+                margin-top: 60px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .hero img {
+                width: 400px;
             }
         }
 
@@ -260,7 +287,7 @@
                 <span class="hamburger-icon">☰</span>
             </div>
             <ul class="dropdown-menu">
-                <li><a href="#haapari">Hääpari</a></li>
+                <li><a href="haapari.html">Hääpari</a></li>
                 <li><a href="#juhlapaikka">Juhlapaikka</a></li>
                 <li><a href="#pukukoodi">Pukukoodi</a></li>
                 <li><a href="#lahjat">Lahjat</a></li>
@@ -274,47 +301,6 @@
         <h3>Villa Ivan Faliniin,</h3>
         <h3>Helsingin Vuosaareen!</h3>
         <p style="color: white; font-size: 1rem; padding: 0 20px;">Lähipiirissämme on paljon meille rakkaita lapsia, ja he ovat sydämellisesti tervetulleita juhlaamme. Pyydämme kuitenkin, että iltaosuuteen kahdeksasta eteenpäin jäävät vain aikuiset. Lisätietoa sekä ohjeet ilmoittautumiseen lisätään tälle sivulle lähempänä tilaisuutta.</p>
-    </div>
-
-    <div class="section" id="haapari">
-        <h1 style="color: white;">Hääpari</h1>
-        <div class="card">
-            <h2>Re-cap hääparista, aveceille joita ei ole tavattu tai huonomuisisille läheisille</h2>
-            <p>Kaksi toivonsa menettänyttä löysi toisensa Tinderistä koronasulkujen aikakaudella ja treffasi seurasaaressa geokätköjen merkeissä.</p>
-            <p>Joidenkin kauhistelemalla nopeudella Jaakon kodista tuli yhteinen, perheeseen liittyi uusi rescue-kissa Espanjasta ja pian olikin ostettu pala Vantaata.</p>
-            <p>Pieneksi ikuisuusprojekiksi osoittautunut talonrakennus on aiheuttanut molemmille harmaita hiuksia, mutta siitä huolimatta jaksamista riittänyt on monituisiin reissuihin. Syksyllä 2024 pariskunta oli Singaporessa jossa Jaakko ensitreffien teemasta inspiroituneena käytti geokätköä kosintaan.</p>
-            <p>Viimein puolitoista vuotta ennen häitä päästiin rakennusprojektikin viimein aloittamaan. Aika näyttää onko valmista vielä häihin mennessä.</p>
-        </div>
-        <div class="photo-gallery">
-            <figure>
-                <img src="/assets/images/first-photo.png" alt="Ensimmäinen yhteiskuva">
-                <figcaption>Ensimmäinen yhteiskuva</figcaption>
-            </figure>
-            <figure>
-                <img src="/assets/images/first-trip.png" alt="Ensimmäinen ulkomaanmatka">
-                <figcaption>Ensimmäinen ulkomaanmatka</figcaption>
-            </figure>
-            <figure>
-                <img src="/assets/images/first-christmas.png" alt="Ensimmäinen yhteinen joulukortti">
-                <figcaption>Ensimmäinen yhteinen joulukortti</figcaption>
-            </figure>
-            <figure>
-                <img src="/assets/images/first-cat.png" alt="Ensimmäinen yhteinen kissa">
-                <figcaption>Ensimmäinen yhteinen kissa</figcaption>
-            </figure>
-            <figure>
-                <img src="/assets/images/first-festival.png" alt="Ekat yhteiset festarit">
-                <figcaption>Ekat yhteiset festarit</figcaption>
-            </figure>
-            <figure>
-                <img src="/assets/images/engagement-drinks.png" alt="Ekat drinkit kihlauksen jälkeen">
-                <figcaption>Ekat drinkit kihlauksen jälkeen</figcaption>
-            </figure>
-            <figure>
-                <img src="/assets/images/first-house.png" alt="Ensimmäinen yhteinen talo">
-                <figcaption>Ensimmäinen yhteinen talo</figcaption>
-            </figure>
-        </div>
     </div>
 
     <div class="section" id="juhlapaikka">
@@ -374,6 +360,11 @@
                 menuToggle.classList.toggle('clicked');
                 dropdownMenu.classList.toggle('active');
             });
+
+            // Remove hash from URL on page load
+            if (window.location.hash) {
+                window.history.replaceState(null, null, window.location.pathname);
+            }
         });
 
         window.scrollTo(0, 0);
