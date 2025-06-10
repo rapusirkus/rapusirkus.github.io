@@ -27,25 +27,23 @@
             font-weight: 300;
             color: var(--text-color);
             background: linear-gradient(90deg, #0d0e45, #586dad);
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
+        h1, h2 {
+            font-family: 'ivy-presto-bold', serif;
+            margin-bottom: 1rem;
+        }
         h1 {
             font-size: 4rem;
-            margin-bottom: 1rem;
             line-height: 1.1;
             text-align: center;
-            font-family: 'ivy-presto-bold', serif;
-            margin-bottom: 1.5rem;
         }
-
         h2 {
             font-size: 2rem;
-            margin-bottom: 0.75rem;
             line-height: 1.2;
-            font-family: 'ivy-presto-bold', serif;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
+            margin-top: 2rem;
         }
 
         .nav {
@@ -114,10 +112,13 @@
             display: block;
         }
 
-        .section {
-            padding: 2rem;
+        .container {
             max-width: 800px;
-            margin: 0 auto 2rem;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
             overflow: hidden;
         }
 
@@ -125,23 +126,13 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 2rem;
             margin-bottom: 0;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 2rem 0;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
             position: relative;
         }
 
@@ -214,8 +205,9 @@
 
         .hero p {
             font-size: 1.5rem;
-            margin: 0.5em auto;
             max-width: 800px;
+            margin: 1rem auto;
+            line-height: 1.8;
             padding: 0 1rem;
         }
 
@@ -229,8 +221,11 @@
         }
 
         @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
         }
 
@@ -254,7 +249,7 @@
             </ul>
         </div>
     </nav>
-    <div class="hero">
+    <div class="hero container">
         <img src="assets/images/hero-logo.png" alt="Hero Logo">
         <h1>Lämpimästi tervetuloa häihimme</h1>
         <h1>15.8.2026</h1>
@@ -263,9 +258,9 @@
         <p style="color: white; font-size: 1rem; padding: 0 20px;">Lähipiirissämme on paljon meille rakkaita lapsia, ja he ovat sydämellisesti tervetulleita juhlaamme. Pyydämme kuitenkin, että iltaosuuteen kahdeksasta eteenpäin jäävät vain aikuiset. Lisätietoa sekä ohjeet ilmoittautumiseen lisätään tälle sivulle lähempänä tilaisuutta.</p>
     </div>
 
-    <div class="section" id="juhlapaikka">
+    <div class="section container" id="juhlapaikka">
         <h1 style="color: white;">Juhlapaikka</h1>
-        <div class="card">
+        <div class="card container">
             <p>Meillä ei ole erillistä kirkkovihkimistä, vaan koko juhla vietetään Villa Ivan Falinissa.</p>
             <h2>Sijainti</h2>
             <p>Villa Ivan Falin sijaitsee Helsingin Vuosaaressa, meren äärellä. Juhlapaikalle on hyvät kulkuyhteydet sekä julkisilla että omalla autolla.</p>
@@ -289,18 +284,18 @@
         </div>
     </div>
 
-    <div class="section" id="pukukoodi">
+    <div class="section container" id="pukukoodi">
         <h1 style="color: white;">Pukukoodi</h1>
-        <div class="card">
+        <div class="card container">
             <h2>Tumma / vaalea puku</h2>
             <p><strong>Miehet:</strong> Puku kauluspaidalla ja halutessasi solmiolla, värit vapaasti valittavissa. Voit halutessasi yhdistää puvuntakkiin myös toiset housut, mutta toivoisimme ettei tilaisuuteemme tultaisi farkuissa.</p>
             <p><strong>Naiset:</strong> Mekko / housupuku. Vältäthän kokonaan valkoisia sekä minihamemittaisia asuja. Tärkeintä on, että kokonaisuus on juhlava ja arvokas.</p>
         </div>
     </div>
 
-    <div class="section" id="lahjat">
+    <div class="section container" id="lahjat">
         <h1 style="color: white;">Lahjat</h1>
-        <div class="card">
+        <div class="card container">
             <p>Koska olemme jo ehtineet kerryttää kaikki tarpeelliset pyyhkeet, kodinkoneet ja astiat, toivoisimme ettette toisi meille fyysisiä lahjoja juhlapäivänämme.</p>
             <p>Jos haluatte muistaa meitä, kerrytämme häämatkakassaa tilille FI96 8954 0710 0847 31.</p>
             <p>Jos on ihan ihan pakko tuoda joitain konkreettista hääjuhlaan tai raha tuntuu pahalta antaa niin astiastomme on Pentikin Saagaa ja lennämme Finnairilla.</p>
